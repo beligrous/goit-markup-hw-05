@@ -9,6 +9,8 @@
   --main-text-color: #757575;
   --activ-text-color: #2196f3;
   --icon-fill: #afb1b8;
+  --trans-duration: 250ms;
+  --trans-time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -56,6 +58,7 @@ ul {
   letter-spacing: 0.02em;
   display: block;
   padding: 32px 0;
+  transition: color var(--trans-duration) var(--trans-time-function);
 }
 
 .head-list {
@@ -106,6 +109,7 @@ ul {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   display: flex;
+  transition: color var(--trans-duration) var(--trans-time-function);
 }
 
 .head-icon {
@@ -184,6 +188,7 @@ ul {
   padding: 10px 32px;
   border-radius: 4px;
   min-width: 200px;
+  transition: background-color var(--trans-duration) var(--trans-time-function);
 }
 
 .portfolio-button {
@@ -200,6 +205,9 @@ ul {
   border-radius: 4px;
   min-width: 73px;
   border-color: transparent;
+  transition: color var(--trans-duration) var(--trans-time-function),
+    background-color var(--trans-duration) var(--trans-time-function),
+    box-shadow var(--trans-duration) var(--trans-time-function);
 }
 
 .hero-button:hover,
@@ -354,10 +362,12 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color var(--trans-duration) var(--trans-time-function);
 }
 
 .member-icon {
   fill: var(--icon-fill);
+  transition: fill var(--trans-duration) var(--trans-time-function);
 }
 
 .member-soc:hover,
@@ -387,6 +397,7 @@ ul {
 
 .client-icon {
   fill: var(--icon-fill);
+  transition: fill var(--trans-duration) var(--trans-time-function);
 }
 
 .client {
@@ -397,6 +408,8 @@ ul {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: cursor var(--trans-duration) var(--trans-time-function),
+    border-color var(--trans-duration) var(--trans-time-function);
 }
 
 .client:hover > .client-icon,
@@ -464,6 +477,8 @@ ul {
 
 .work-list .link {
   display: inline-block;
+  transition: box-shadow var(--trans-duration) var(--trans-time-function),
+    cursor var(--trans-duration) var(--trans-time-function);
 }
 
 .work-card {
@@ -502,6 +517,7 @@ ul {
   color: rgba(255, 255, 255, 0.6);
   display: block;
   margin-top: 9px;
+  transition: color var(--trans-duration) var(--trans-time-function);
 }
 
 .foot > .container {
@@ -535,6 +551,7 @@ ul {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--trans-duration) var(--trans-time-function);
 }
 
 .join-soc:hover,
