@@ -138,6 +138,22 @@ ul {
   color: var(--activ-text-color);
 }
 
+.current {
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--activ-text-color);
+  border-radius: 2px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  left: 0;
+  bottom: 0;
+}
+
 .head {
   border-bottom: 1px solid #ececec;
 }
@@ -479,6 +495,31 @@ ul {
   display: inline-block;
   transition: box-shadow var(--trans-duration) var(--trans-time-function),
     cursor var(--trans-duration) var(--trans-time-function);
+}
+
+.work-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-ower-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform var(--trans-duration) var(--trans-time-function);
+}
+
+.work-list .link:hover .work-ower-text,
+.work-list .link:focus .work-ower-text {
+  transform: translateY(0);
 }
 
 .work-card {
