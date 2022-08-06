@@ -118,6 +118,7 @@ ul {
   display: inline-flex;
   justify-content: center;
   align-self: center;
+  transition: fill var(--trans-duration) var(--trans-time-function);
 }
 
 .head-title:hover,
@@ -424,8 +425,7 @@ ul {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: cursor var(--trans-duration) var(--trans-time-function),
-    border-color var(--trans-duration) var(--trans-time-function);
+  transition: border-color var(--trans-duration) var(--trans-time-function);
 }
 
 .client:hover > .client-icon,
@@ -493,8 +493,7 @@ ul {
 
 .work-list .link {
   display: inline-block;
-  transition: box-shadow var(--trans-duration) var(--trans-time-function),
-    cursor var(--trans-duration) var(--trans-time-function);
+  transition: box-shadow var(--trans-duration) var(--trans-time-function);
 }
 
 .work-img-wrapper {
